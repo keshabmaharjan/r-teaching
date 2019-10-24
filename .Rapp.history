@@ -1,0 +1,330 @@
+1/(1 + 1/2e-4*355/280*5e16/1.33e20)
+2.13*8.9
+8.9*1.38
+8.9*1.38*4.77
+8.9*1.39*4.77
+-60.4/(8.9*1.38)
+8.65*1.39
+42.2/4.77
+42.2/4.77 - 12.0235
+-(42.2/4.77 - 12.0235)/1.1
+8.65 - 3.36 - 2.887763
+2.4 + 2.89 + 3.36
+12.02 - 8.85
+12.0235 - 8.84696
+3.17654/1.1
+8.65*2.12
+2.402237/8.65
+2.887764/8.65
+3.36/8.65
+ls()
+22 + 273
+6.11*exp(5310*(1/273 - 1/295))
+6.11*exp(5310*(1/273 - 1/295))*0.65
+1/(1/273 - log(16.94026/6.11)/5310)
+1/(1/273 - log(16.94026/6.11)/5310) - 273
+8.314*250/9.807/0.02896
+1000*exp(-11/7.318)
+1000*exp(-50/7.318)
+100000/9.807
+22240/9.807
+107.8/9.807
+(10196.8 - 2267.8)/10196.8*100
+(2267.8 - 10.992)/10196.8*100
+8.314*250/0.02897/9.807
+1000*exp(-11/7.3)
+1 - 222.4/1000
+213.74 - 0.5*205.138 - 197.67
+-393.51 - (-110.53)
+-282.98 - 298*(-86.499/1000)
+0.01/1e5
+1e3/1e4
+r = seq(0, 1, by=0.010
+)
+gamma = 0.1
+u = gamma*(1 - exp(-r^2/1))/2/pi/r
+plot(r, u)
+r = seq(0, 10, by=0.01)
+u = gamma*(1 - exp(-r^2/1))/2/pi/r
+plot(r, u)
+2*7.292e-5*cos(45/180*pi)/6371000
+sqrt(4*pi^2*10/1.618654e-11)
+2*pi*6371000*cos(45/180*pi)
+28305607/4938589
+ls()
+rep(0, times=100)
+8/4000000
+1e6*1.5e-12
+1/(2e-6 + 2e-6 + 1.5e-6)
+181818.2/86400
+1.5e-6/(2e-6 + 2e-6 + 1.5e-6)
+1e3*1e-7*8.206e-5*280*7e7*1.3e-2*1.2*7e4*1e-9*0.9
+1/ 0.0001580712
+6326.263/86400
+6326.263/3600
+(0.0001580712 + 1.5e-6)/(2e-6 + 2e-6 + 1.5e-6 + 0.0001580712)
+(0.00001580712 + 1.5e-6)/(2e-6 + 2e-6 + 1.5e-6 + 0.00001580712)
+(2e-6 + 2e-6 + 1.5e-6)
+1.3e-2*1.2*7e4*7e7
+5 + 4 + 5 + 4 + 8.5 + 15
+4.5 + 5 + 5 + 5 + 10 + 13.5
+3.5 + 3.5 + 4.5 + 5 + 8.5 + 15
+4.5 + 4 + 5 + 4.5 + 8.5 + 7
+5 + 5 + 4 + 10 + 15 + 5
+4.5 + 5 + 5 + 5 + 7.5 + 9.5
+5 + 3.5 + 4.5 + 3 + 4 + 6.5
+4.5 + 5 + 4 + 3 + 7.5 + 10
+4 + 3.5 + 3.5 + 2 + 9 + 14
+5 + 4 + 3 + 7.5 + 11
+4.5 + 5 + 5 + 5 + 9.5 + 15
+5 + 5 + 5 + 2 + 8.5 + 12
+5 + 5 + 4 + 5 + 10 + 14.5
+5 + 5 + 4.5 + 4.5 + 8.5 + 15
+5 + 5 + 4.5 + 2 + 8.5 + 15
+5 + 4 + 5 + 5 + 9 + 12
+5 + 4.5 + 4.5 + 3 + 7.5 + 13.5
+5 + 5 + 4.5 + 5 + 8.5 + 14.5
+4.5 + 5 + 5 + 5 + 7.5 + 11
+install.packages(c('spam', 'fields', 'maps', 'abind'))
+library(fields); library(maps); library(abind)
+library(fields); library(maps)
+setwd('/Users/amostai/Dropbox/Public/R_Intro_for_Atmos_Sci/')
+getwd()
+load(file='PM25_T_daily_US_201007.RData')
+load("/Users/amostai/Dropbox/Public/R_Intro_for_Atmos_Sci/PM25_T_daily_US_201007.RData")
+dim(T.US)
+dim(T.US); head(T.US)
+lon.US
+lat.US
+day
+ind = which(day == 20100701)
+ind
+ind = which(day == 201007031)
+ind
+ind = which(day == 20100731)
+ind
+ind = which(day == 20100701)
+ind
+image.plot(lon.US, lat.US, T.US[,,ind])
+map('world', add=TRUE)
+map('states', add=TRUE)
+map('state', add=TRUE)
+?map
+source('get.geo.R')
+getwd()
+source('get_geo.R')
+plot.field(T.US[,,ind], lon.US, lat.US, type='def', zlim=c(270, 310))
+PM25.met.data = read.table(file='PM25_met_Ohio_201007.txt', header=TRUE, sep='\t')
+head(PM25.met.data)
+day = PM25.met.data$day#
+	PM25 = PM25.met.data$PM25#
+	Ta = PM25.met.data$Ta#
+	prec = PM25.met.data$prec#
+	SLP = PM25.met.data$SLP
+PM25
+length(PM25)
+PM_index = rep(NaN, times=length(PM25))#
+	for (t in 1:length(PM25)) {#
+		if (PM25[t] >= 30) PM_index[t] = 'High' else if (PM25[t] >= 10 & PM25[t] < 30) PM_index[t] = 'Med' else PM_index[t] = 'Low'#
+	}
+PM_index
+print(cbind(day, PM25, PM_index), quote=FALSE)
+load(file='PM25_T_daily_US_201007.RData')
+T.US
+dim(T.US)
+dim(PM25.US)
+25*12
+reg.coef.PM25.T = matrix(NaN, nrow=length(lon.US), ncol=length(lat.US))
+PM25.US
+lon.US
+lat.US
+i = 16; j = 8
+data.mat = cbind(T.US[i,j,], PM25.US[i,j,])#
+			data.mat = na.omit(data.mat)	# Manually remove missing data
+data.mat
+nrow(data.mat) < 10
+X = data.mat[,1]	# T.US#
+				Y = data.mat[,2]	# PM25.US
+X
+Y
+reg = lm(Y ~ X)
+reg
+summary(reg)
+summary(reg)$coefficients
+pval = summary(reg)$coefficients[2,4]
+pval
+Now you want to calculate the regression coefficient for PM25 on T for every 2x2.5 grid square over the US, discarding it if the it is statistically insignificant (p > 0.05) or if there aren't enough data (n < 10):#
+	reg.coef.PM25.T = matrix(NaN, nrow=length(lon.US), ncol=length(lat.US))#
+	for (i in 1:length(lon.US)) {#
+		for (j in 1:length(lat.US)) {#
+			data.mat = cbind(T.US[i,j,], PM25.US[i,j,])#
+			data.mat = na.omit(data.mat)	# Manually remove missing data#
+			if (nrow(data.mat) < 10) {#
+				reg.coef.PM25.T[i,j] = NaN#
+			} else {#
+				X = data.mat[,1]	# T.US#
+				Y = data.mat[,2]	# PM25.US#
+				reg = lm(Y ~ X)#
+				pval = summary(reg)$coefficients[2,4]#
+				if (pval < 0.05) {#
+					reg.coef.PM25.T[i,j] = summary(reg)$coefficients[2,1]#
+				} else {#
+					reg.coef.PM25.T[i,j] = NaN#
+				}#
+			}#
+		}#
+	}
+library(fields); library(maps)
+library(fields); library(maps)#
+	image.plot(lon.US, lat.US, reg.coef.PM25.T)#
+	map('world', add=TRUE)
+plot.field(reg.coef.PM25.T, lon.US, lat.US, type='sign')
+A = function(x) x^2 + 2
+A(3)
+Example: finding moving averages for a vector of time series data.#
+	mov.avg.1D = function(x, t.minus, t.plus) {#
+		x.ma = rep(NaN, times=length(x))#
+		for (t in 1:length(x)) {#
+			t1 = t - t.minus#
+			t2 = t + t.plus#
+			if (t1 < 1) t1 = 1#
+			if (t2 > length(x)) t2 = length(x)#
+			x.ma[t] = mean(x[t1:t2], na.rm=TRUE)#
+		}#
+		return(x.ma)#
+	}
+Ta.ma = mov.avg.1D(Ta, 2, 2)	# 5-day moving averages
+Ta.ma = mov.avg.1D(Ta, 2, 2)
+Ta.mas
+Ta.ma
+plot(day, Ta, type='o', col='black', xlab='Day of July 2010', ylab='Temperature (K)')#
+	matplot(day, Ta.ma, type='l', col='red', add=TRUE)
+Sampling 10000 times:#
+	n.trials = 10000#
+	Ta.predict = 303#
+	prec.predict = 2.0#
+	PM25.predict = rep(NaN, times=n.trials)
+beta0 = rnorm(1, mean=-515.165, sd=15.652)
+beta0
+beta1 = rnorm(1, mean=1.7985, sd=0.0527)
+beta1
+beta2 = rnorm(1, mean=-0.4797, sd=0.0218)
+beta2
+PM25.predict[n] = beta0 + beta1*Ta.predict + beta2*prec.predict
+beta0 + beta1*Ta.predict + beta2*prec.predict
+Sampling 10000 times:#
+	n.trials = 10000#
+	Ta.predict = 303#
+	prec.predict = 2.0#
+	PM25.predict = rep(NaN, times=n.trials)#
+	for (n in 1:n.trials) {#
+		# Sampling beta0 assuming normal distribution:#
+		beta0 = rnorm(1, mean=-515.165, sd=15.652)#
+		# Sampling beta1:#
+		beta1 = rnorm(1, mean=1.7985, sd=0.0527)#
+		# Sampling beta2:#
+		beta2 = rnorm(1, mean=-0.4797, sd=0.0218)#
+		# Predicting PM25:#
+		PM25.predict[n] = beta0 + beta1*Ta.predict + beta2*prec.predict#
+	}
+mean(PM25.predict)
+sd(PM25.predict)
+hist(PM25.predict)
+mean(PM25.predict); sd(PM25.predict)
+-515.165 + 1.7985*Ta.predict - 0.4797*prec.predict
+sqrt(15.652^2 + 0.0527^2*Ta.predict^2 + 0.0218^2*prec.predict^2)
+fx = function(x) 3*x^2 + 2*x - 5
+uniroot(fx, interval=c(0, 2))
+optimize(fx, interval=c(-2, 2))
+We can do multidimensional optimization using function "optim" or through writing our own algorithm:#
+# E.g., z = x^2 + 2*y^2 - 3*x + 4*y - 5 (we know minimum occurs at x = 1.5, y = -1.0)#
+	f.xy = function(X) {	# X is a vector of independent variables#
+		x = X[1]#
+		y = X[2]#
+		z = x^2 + 2*y^2 - 3*x + 4*y - 5#
+		return(z)#
+	}#
+	optim(par=c(0, 0), fn=f.xy)
+A = 'Hello'
+A
+B = 'World'
+C = paste(A, B, '!', sep=''); C
+C = paste(A, B, '!', sep=' '); C
+C = paste(A, ' ', B, '!', sep=''); C
+substr(A, 1, 4)
+strtrim(A, 4)
+paste(substr(A, 1, 3), substr(B, 5, 5), sep='')
+system('ls')
+E.g., duplicating all existing get_xxx.R files and renamed them to be find_xxx.R:#
+	list.of.files = dir(pattern=c('get', '.R'))#
+	for (n in 1:length(list.of.files)) {#
+		command = paste('cp ', list.of.files[n], ' ', 'find', substr(list.of.files[n], 4, 100), sep='')#
+		system(command)#
+	}
+exit
+q()
+getwd()
+?mean
+1+1
+help(mean)
+a = c(21.5, 22.6, 25.4, 27.5, 20.4, 21.8, 24.0)
+a
+b = seq(1, 7)	# Equivalent to: b = 1:7#
+	d = seq(0.2, 1.4, by=0.2)#
+	e = seq(0, 2*pi, length=7)
+b
+d
+f = rep(1, times=5)#
+	g = rep(NaN, times=7)	# Empty vector
+f
+g
+A = rbind(a, b, d, e)
+A
+B = cbind(a, b, d, e)
+B
+C = matrix(1, nrow=3, ncol=5); C
+D = matrix(seq(1, 15), nrow=3, ncol=5); D
+E = matrix(seq(1, 15), nrow=3, ncol=5, byrow=TRUE); E
+G = array(0, dim=c(4,3,2))
+G
+load(file='PM25_T_daily_US_201007.RData')
+dim(T.US); head(T.US)
+dim(lat.US)
+dim(day)
+day
+lat.US
+ls
+ls()
+a.US <- 1
+a.us
+a.US
+T.US
+dim(T.US)
+?head()
+head(T.US)
+?head
+?mean
+dim(lat.US)
+lat.US
+lon.US
+?apply
+mean(T.US, na.rm=TRUE)
+quantile(T.US, c(0.25, 0.75), na.rm=TRUE)
+apply(T.US, c(1,2), mean, na.rm=TRUE)
+apply(T.US, 3, mean, na.rm=TRUE)
+x = T.US[23,9,]		# Time series in Boston#
+	y = T.US[21,8,]		# Time series in New York#
+	cov(x, y, use='complete.obs')#
+	cor(x, y, use='complete.obs')
+plot(x, y, type='p', xlab='Boston temperature (K)', ylab='New York temperature (K)')
+q()
+load(file='PM25_T_daily_US_201007.RData')
+plot(x, y, type='p', xlab='Boston temperature (K)', ylab='New York temperature (K)')
+x = T.US[23,9,]		# Time series in Boston#
+	y = T.US[21,8,]		# Time series in New York
+plot(x, y, type='p', xlab='Boston temperature (K)', ylab='New York temperature (K)')
+q()
+?c()
+b = seq(1, 7)
+b
+q()

@@ -1,0 +1,9 @@
+# OMI monthly HCHO data over North America (140-60W, 10-60N) with latitudinal correction of drfit 
+# Time: 2005-2014 (YEAR), May-Sep. (MONTH)
+# Resolution: 0.5 degree
+# Data fields:
+# Lon[ : ], as columns (COL)
+# Lat[ : ], as rows (ROW)
+# HCHO_Monthly[COL, ROW, YEAR, MONTH], OMI HCHO columns, unit: molecules cm-2
+# HCHO_corrected_Monthly[COL, ROW, YEAR, MONTH], Temperature-corrected HCHO column, unit: molecules cm-2
+# TS_Monthly[COL, ROW, YEAR, MONTH], MERRA-2 surface skin temperature, unit: K
